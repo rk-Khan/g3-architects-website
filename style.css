@@ -23,9 +23,7 @@
 .bg-light{
   background-color: rgba(255, 144, 14, 0.10);
 }
-.text-center{
-  text-align: center;
-}
+
 .btn-primary{
   background-color: rgba(255, 144, 14, 1.00);
   color: white;
@@ -34,6 +32,13 @@
   font-weight: 600;
   border: none;
   border-radius: 8px;
+}
+main{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+main > section{
+  margin-top: 130px;
 }
 
 /* Header style */
@@ -57,7 +62,7 @@
   margin: 0 auto;
 }
 .brand{
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 /* banner related styles */
@@ -65,6 +70,7 @@
   max-width: 850px;
   margin: 0 auto;
   margin-bottom: 50px;
+  text-align: center;
 }
 .banner-title{
   font-size: 4rem;
@@ -73,11 +79,78 @@
 .banner-img{
   width: 100%;
 }
+.teams{
+  align-items: center;
+}
+.team-img-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.our-features{
+  margin-left: 130px;
+  max-width: 530px;
+}
+.section-title{
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+#quick-list{
+  font-weight: 500;
+}
+.facts-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 
+}
+.fact-card{
+  border: 1px solid #FF900E;
+  width: 240px;
+  height: 240px;
+  border-radius: 8px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.fact-number{
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.fact-name{
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 8px;
+  color: #727272;
+}
+.fact-description{
+  max-width: 540px;
+}
+
+/* .banner-description{
+  overflow-wrap: break-word;
+} */
 
 /* responsive media query */
 @media screen and (max-width: 576px) {
-  .navbar, .nav-links{
+  .navbar, .nav-links, .teams{
     flex-direction: column;
+  }
+  .team-img-container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .our-features{
+    margin-left: 20px;
+  }
+}
+
+/* medium size device */
+@media screen and (min-width: 576px) and (max-width: 993px) {
+  .teams{
+    flex-direction: column;
+  }
+  .our-features{
+    margin: 50px auto;
   }
 }
